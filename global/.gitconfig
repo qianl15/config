@@ -9,3 +9,5 @@
 	status = auto
 [push]
 	default = current
+[credential]
+	helper = store
