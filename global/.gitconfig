@@ -1,0 +1,11 @@
+[user]
+	name = Qian Li
+	email = liqian.cs@gmail.com
+[core]
+	editor = vim
+[color]
+	diff = auto
+	branch = auto
+	status = auto
+[push]
+	default = current
