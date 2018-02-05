@@ -13,7 +13,6 @@ set hlsearch
 set mouse=a
 set ignorecase
 set foldmethod=syntax
+set nofoldenable
 
 colorscheme molokai
-
-	 
