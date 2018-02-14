@@ -3,7 +3,7 @@
 ##### Install arachne-all
 ARACHNE_DIR=${HOME}/arachne-all
 
-git https://github.com/PlatformLab/arachne-all.git ${ARACHNE_DIR}
+git clone https://github.com/PlatformLab/arachne-all.git ${ARACHNE_DIR}
 cd ${ARACHNE_DIR}
 git submodule update --init --recursive
 
