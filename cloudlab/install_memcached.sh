@@ -19,5 +19,4 @@ ln -s ${HOME}/arachne-all arachne-all
 ./autogen.sh
 ./configure --prefix=/usr/local/memcached
 make 
-make test
 sudo make install
