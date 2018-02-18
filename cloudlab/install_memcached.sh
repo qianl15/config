@@ -14,7 +14,7 @@ MEMCACHE_DIR=${HOME}/memcached
 git clone https://github.com/PlatformLab/memcached.git ${MEMCACHE_DIR}
 cd ${MEMCACHE_DIR}
 git fetch
-git checkout arachne_kernel_dispatcher
+git checkout arachne_dispatch_conns
 ln -s ${HOME}/arachne-all arachne-all
 ./autogen.sh
 ./configure --prefix=/usr/local/memcached
