@@ -15,4 +15,7 @@ set ignorecase
 set foldmethod=syntax
 set nofoldenable
 
+set background=dark
+set t_Co=256
+
 colorscheme molokai
