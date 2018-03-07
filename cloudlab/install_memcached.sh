@@ -8,15 +8,25 @@
 # make && make test && make install
 
 ##### Install from our code
-./install_arachne.sh
+# ./install_arachne.sh
 
-MEMCACHE_DIR=${HOME}/memcached
+MEMCACHE_DIR=${HOME}/memcached-scheme1
 git clone https://github.com/PlatformLab/memcached.git ${MEMCACHE_DIR}
 cd ${MEMCACHE_DIR}
 git fetch
-git checkout arachne_dispatch_conns
+git checkout arachne_scheme1_timetrace_block
 ln -s ${HOME}/arachne-all arachne-all
 ./autogen.sh
-./configure --prefix=/usr/local/memcached
-make 
-sudo make install
+./configure --prefix=/usr/local/memcached-s1
+make -j32 
+
+MEMCACHE_DIR=${HOME}/memcached-scheme4
+git clone https://github.com/PlatformLab/memcached.git ${MEMCACHE_DIR}
+cd ${MEMCACHE_DIR}
+git fetch
+git checkout arachne_scheme4_timetrace_block
+ln -s ${HOME}/arachne-all arachne-all
+./autogen.sh
+./configure --prefix=/usr/local/memcached-s4
+make -j32
+
