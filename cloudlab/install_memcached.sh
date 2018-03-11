@@ -24,7 +24,7 @@ MEMCACHE_DIR=${HOME}/memcached-scheme4
 git clone https://github.com/PlatformLab/memcached.git ${MEMCACHE_DIR}
 cd ${MEMCACHE_DIR}
 git fetch
-git checkout arachne_scheme4_timetrace_block
+git checkout arachne_scheme4_timetrace_nolock
 ln -s ${HOME}/arachne-all arachne-all
 ./autogen.sh
 ./configure --prefix=/usr/local/memcached-s4
