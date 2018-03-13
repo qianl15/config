@@ -24,5 +24,9 @@ cd ../ArachnePerfTests
 git checkout master
 git pull origin master
 
+cd ../arachne-sosp2017-benchmarks
+git checkout master
+git pull origin master
+
 cd ..
 ./buildAll.sh
