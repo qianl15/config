@@ -18,6 +18,11 @@ cp $SCRIPTPATH/clang-format ~/
 ln -s $SCRIPTPATH/.clang-format ~/
 echo "SUCCESS"
 
+echo -n "  Installing smux and cluster shell"
+cp $SCRIPTPATH/smux.py ~/
+cp $SCRIPTPATH/clustershell.py ~/
+echo "SUCCESS"
+
 echo -n "  Installing bash configuration... "
 cat >> ~/.bashrc <<EOM
 source $SCRIPTPATH/.bashrc
