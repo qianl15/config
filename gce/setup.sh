@@ -12,3 +12,5 @@ cd $SCRIPTPATH
 
 # On other nodes, run the join command provided by the master
 # sudo kubeadm join <master_ip>:6443 --token <token> --discovery-token-ca-cert-hash <cert-has>
+
+# If the join token expired, sudo kubeadm token create --print-join-command
