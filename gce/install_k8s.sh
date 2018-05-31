@@ -1,6 +1,7 @@
 #!/bin/bash
-sudo apt-get update \
-  && sudo apt-get install -qy docker.io
+
+# Install docker first.
+./install_docker.sh
   
 sudo apt-get update \
   && sudo apt-get install -y apt-transport-https \
