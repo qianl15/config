@@ -3,17 +3,12 @@
 # Change to your own account!
 hubName="qianl15"
 
-# Run this script on the master node!
 scriptPATH=$(dirname $(readlink -f $0))
 
 masterIP=$(ifconfig ens4 | grep Mask | awk '{print $2}'| cut -f2 -d:)
 echo "Start Fission services on master, ens4 ip: $masterIP"
 
-fissionPATH=$GOPATH/src/github.com/fission/fission
-# 1. Init
-git clone https://github.com/qianl15/fission-s.git ${fissionPATH}
-
-# 2. Install go-1.10
+# 1. Install go-1.10
 # https://tecadmin.net/install-go-on-ubuntu/
 sudo apt-get update
 wget https://dl.google.com/go/go1.10.1.linux-amd64.tar.gz
@@ -34,15 +29,19 @@ EOM
 # check version
 go version
 
-# 3. Install glide
+# 2. Install glide
 sudo add-apt-repository ppa:masterminds/glide && sudo apt-get update
 sudo apt-get install glide
 
-# 4. Install helm
+# 3. Install helm
 ./install_helm.sh
 
-# 5. compile Fission
+# 4. Install Fission
+fissionPATH=$GOPATH/src/github.com/fission/fission
+git clone https://github.com/qianl15/fission-s.git ${fissionPATH}
+
 cd $fissionPATH
+git checkout qianDev
 glide install -v
 
 ################ Uncomment if you want to start Fission server

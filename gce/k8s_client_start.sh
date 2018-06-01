@@ -17,6 +17,8 @@ joinCmd="sudo kubeadm join $master_ip:6443 --token $token --discovery-token-ca-c
 echo $joinCmd
 $joinCmd
 
+sleep 20 # wait to start up
+
 # 2. Setup .kube directory
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/kubelet.conf $HOME/.kube/config
