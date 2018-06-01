@@ -5,12 +5,14 @@ cd $SCRIPTPATH
 
 ../global/setup.sh
 
+# Install some essential package
+sudo apt-get install -y gcc zip
+
 ./install_k8s.sh
 
 # On master node, run this:
 # ./k8s_master_start.sh
 
-# On other nodes, run the join command provided by the master
-# sudo kubeadm join <master_ip>:6443 --token <token> --discovery-token-ca-cert-hash <cert-has>
+# On other nodes:
+# ./k8s_client_start.sh
 
-# If the join token expired, sudo kubeadm token create --print-join-command
