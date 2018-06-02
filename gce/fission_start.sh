@@ -47,6 +47,12 @@ glide install -v
 ################ Uncomment if you want to start Fission server
 #helm install --set "image=${hubName}/fission-bundle,pullPolicy=Always,analytics=false" charts/fission-all --namespace fission
 
-#### Install Fission CLI
+## Install Fission CLI
 cd $fissionPATH/fission
 ./install-cli.sh
+
+## Set environmental variables
+echo -n "  Installing bash configurations for Fission... "
+cat $scriptPATH/fission_config.sh >> $HOME/.bashrc
+echo "SUCCESS"
+
