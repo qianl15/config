@@ -5,7 +5,7 @@
 SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 cd $SCRIPTPATH
 
-echo "Running setup..."
+echo "Running setup-shim... (for full version, run setup.sh!)"
 
 echo -n "  Installing git configuration... "
 ln -s $SCRIPTPATH/.gitconfig ~/
