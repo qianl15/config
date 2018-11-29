@@ -4,8 +4,8 @@ set ai
 set bs=2
 set showmatch
 set laststatus=2
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set expandtab
 set number
 set ruler
@@ -14,6 +14,10 @@ set mouse=a
 set ignorecase
 set foldmethod=syntax
 set nofoldenable
+set formatoptions+=r
+set formatoptions+=c
+set listchars=tab:-\ ,trail:·
+set list
 
 "set wrap
 "set linebreak
